@@ -21,18 +21,20 @@ void loop() {
 
   if (Serial.available() > 0) {
 
-  incomingByte = Serial.readString();
+  incomingByte = Serial.readString(); //read incoming data
   lcd.clear();
-while(incomingByte[i] != NULL){
-  lcd.print(incomingByte[i]);
-  i = i + 1;
-}
-  i = 0;
+   
+  while(incomingByte[i] != NULL){
+    lcd.print(incomingByte[i]); //printing character by character by cahracter
+    i = i + 1;
+  }
+i = 0;
+   
  // lcd.setCursor(0, 0);
   //lcd.print(incomingByte);
   delay(1000);
   lcd.clear();
-  lcd.print("x");
+  lcd.print("x"); //print a value to check transission
   delay(1000);
 
   //Serial.write(incomingByte);
