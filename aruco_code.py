@@ -48,9 +48,9 @@ def check_price(ID,data,total):
 def send_id(id):
     serialcomm.write(id.encode()) #to send to arduino
     time.sleep(0.5)
-    print(serialcomm.readline()) #.decode('ascii')
+    #print(serialcomm.readline()) #.decode('ascii')
 
-#################################
+############################################################################
 
 marker_dict = aruco.Dictionary_get(aruco.DICT_4X4_50) #initialise to read aruco code
 param_markers = aruco.DetectorParameters_create() #creates a parameter for aruco code detection
