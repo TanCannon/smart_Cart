@@ -42,7 +42,9 @@ def check_price(ID,data,total):
             stirng_total = str(total)
             send_id(stirng_total)
             time.sleep(0.5)
-            print(total)
+
+            print(f"item_id:{string_item}, item_price:{string_price}, items_total:{string_total}")
+            # print(total)
 ###########################################################################
 
 def send_id(id):
